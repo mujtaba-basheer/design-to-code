@@ -27,6 +27,7 @@ body {
   background: #383a45;
   border-radius: 8px;
   padding: 1.6em 1.7em;
+  margin: 0 auto;
 }
 
 .image img {
@@ -59,10 +60,11 @@ body {
   .container {
     display: flex;
     padding: 1.7em 1.6em;
+    max-width: 979px;
   }
 
   .text {
-    font-size: 24px;
+    font-size: 22px;
     margin: auto 1.6em 0 1.6em;
   }
 }
