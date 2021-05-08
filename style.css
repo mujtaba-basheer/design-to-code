@@ -1,0 +1,37 @@
+body {
+  background: rgb(42, 42, 42);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+ul {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  color: aquamarine;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+li {
+  background: rgb(71, 71, 71);
+  border-radius: 8px;
+  padding: 0.5em;
+  transition: background 300ms, color 300ms;
+}
+
+li:hover {
+  background: aquamarine;
+  color: rgb(42, 42, 42);
+}
+
+li:hover::marker {
+  color: aquamarine;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
