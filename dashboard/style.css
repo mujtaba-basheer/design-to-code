@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(252.37deg, #bd00ff 5.28%, #00a3ff 98.3%);
+  padding: 0.8em;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  background: url("./bg.jpg");
+  background-position: 35% 0;
+  height: 100%;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 0;
+}
+
+nav {
+  color: #fff;
+  text-transform: uppercase;
+  background: #2c2931;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  padding: 0.5em 0 0.5em 1.75em;
+  background: inherit;
+}
+
+nav ul .active {
+  background: #2485ff;
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  transition: transform 300ms;
+
+  transform: translateX(-100%);
+}
+
+.nav-mobile.nav-open {
+  transform: translateX(0);
+  z-index: 1000;
+  box-shadow: 0 0 5px 1000px rgba(0, 0, 0, 0.5);
+}
+
+.nav-close {
+  display: block;
+  padding: 1.25em 0 1.25em 1.75em;
+}
+
+.nav-close img {
+  transform: rotate(180deg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .hamburger {
+  display: grid;
+  place-items: center;
+}
+
+header .logo {
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #2d7dff;
+}
+
+main {
+  color: #fff;
+  height: 100%;
+}
+
+main .hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em;
+}
+
+main .hero h1 {
+  text-transform: uppercase;
+  line-height: 100%;
+  font-weight: 800;
+  font-size: 3em;
+}
+
+main .hero p {
+  font-weight: 200;
+  font-size: 2.125em;
+  color: #847d93;
+}
+
+main .hero button {
+  border-radius: 0;
+  border: 2px solid #4d4d4d;
+  background: transparent;
+  text-transform: uppercase;
+  outline: none;
+  font-weight: 700;
+  font-size: 1.125em;
+  color: currentColor;
+
+  padding: 1.25em 0;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 200ms, border 200ms;
+}
+
+main .hero button:hover {
+  background: #2485ff;
+  border: 2px solid #2485ff;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    padding: 4.57em;
+  }
+}
