@@ -4,28 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML Card</title>
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="image">
-        <img src="mountain.jpg" alt="mountain" />
-      </div>
-      <div class="text">
-        <h3 class="text__heading">An Above Average Experience</h3>
-        <p class="text__para">
-          Travel to the premiere mountain tops of New Zealand with our guided
-          tours. Take in the majestic scenary and witness beauty.
-        </p>
-        <img src="link.svg" alt="link" />
-      </div>
+      <main>
+        <div class="hero">
+          <h1>got marketing? advance your business insight.</h1>
+          <p>Fill out the form and receive our award winning newsletter.</p>
+        </div>
+      </main>
+      <section>
+        <form>
+          <div class="form-el">
+            <label for="name">Name</label>
+            <input name="name" type="text" />
+          </div>
+          <div class="form-el">
+            <label for="email">Email</label>
+            <input name="email" type="email" />
+          </div>
+          <div class="form-el">
+            <input type="submit" value="Sign me up" />
+          </div>
+        </form>
+      </section>
     </div>
+
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", (ev) => ev.preventDefault());
+    </script>
   </body>
 </html>
-
