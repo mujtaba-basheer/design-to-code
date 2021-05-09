@@ -22,7 +22,11 @@ body {
 }
 
 .container {
-  background: url("./bg.jpg");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.075),
+      rgba(155, 255, 255, 0.075)
+    ),
+    url("./bg.jpg");
   background-position: 35% 0;
   height: 100%;
   border-radius: 8px;
@@ -41,7 +45,7 @@ nav ul {
 }
 
 nav ul li {
-  padding: 0.5em 0 0.5em 1.75em;
+  padding: 0.75em 0 0.75em 1.75em;
   background: inherit;
 }
 
@@ -74,6 +78,10 @@ nav ul .active {
 
 .nav-close img {
   transform: rotate(180deg);
+}
+
+.home {
+  height: 100%;
 }
 
 header {
@@ -149,6 +157,81 @@ main .hero button:hover {
 
 @media only screen and (min-width: 1000px) {
   body {
-    padding: 4.57em;
+    padding: 5em 4.875em;
+  }
+
+  .container {
+    background-position: 10% 50%;
+    background-blend-mode: screen, normal;
+    display: flex;
+    padding: 0;
+  }
+
+  nav {
+    flex: 0 1 20%;
+    font-size: 18px;
+  }
+
+  nav ul li {
+    transition: background 250ms;
+  }
+
+  nav ul li:hover:not(.active) {
+    background: #413e47;
+  }
+
+  .nav-mobile {
+    position: relative;
+    transform: translateX(0);
+    border-radius: 8px 0 0 8px;
+    width: auto;
+  }
+
+  .nav-close {
+    padding: 2.5em 0;
+  }
+
+  .nav-close img {
+    display: none;
+    cursor: default;
+  }
+
+  .home {
+    padding: 2em 0 0 5em;
+    flex: 0 1 80%;
+  }
+
+  header {
+    text-align: left;
+    font-size: 18px;
+    display: block;
+  }
+
+  header .hamburger {
+    display: none;
+  }
+
+  header .logo {
+    text-align: left;
+    margin-right: auto;
+    font-size: 1.5em;
+  }
+
+  main {
+    color: #fff;
+    height: 100%;
+  }
+
+  main .hero {
+    gap: 3em;
+    width: min-content;
+  }
+
+  main .hero h1 {
+    font-size: 4em;
+  }
+
+  main .hero p {
+    font-size: 2.5em;
   }
 }
